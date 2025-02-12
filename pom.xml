@@ -43,6 +43,19 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+
+        <!--        validation-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!--        email-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
         <!-- jpa-->
         <dependency>
             <groupId>org.postgresql</groupId>
@@ -55,7 +68,6 @@
         </dependency>
 
         <!--  client -->
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -68,16 +80,26 @@
             <optional>true</optional>
         </dependency>
 
-
         <!--        security-->
-
         <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>security-library</artifactId>
-            <version>0.0.2-SNAPSHOT</version>
+            <groupId>ru.vadim</groupId>
+            <artifactId>security-token-service</artifactId>
+            <version>0.0.1</version>
         </dependency>
 
-        <!--        Tests-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-client</artifactId>
+        </dependency>
+
+        <!--        swagger-->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.6.14</version>
+        </dependency>
+
+        <!--        tests-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
@@ -136,7 +158,15 @@
                             <artifactId>lombok</artifactId>
                             <version>${lombok.version}</version>
                         </path>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${org.mapstruct.version}</version>
+                        </path>
                     </annotationProcessorPaths>
+                    <compilerArgs>
+                        <compilerArg>-Amapstruct.defaultComponentModel=spring</compilerArg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
         </plugins>

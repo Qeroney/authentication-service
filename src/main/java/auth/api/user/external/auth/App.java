@@ -1,4 +1,4 @@
-package auth;
+package auth.api.user.external.auth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
