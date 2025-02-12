@@ -10,10 +10,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>auth</groupId>
-    <artifactId>auth</artifactId>
+    <groupId>auth-service</groupId>
+    <artifactId>auth-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>auth</name>
+    <name>auth-service</name>
 
     <properties>
         <java.version>17</java.version>
